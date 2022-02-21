@@ -8,6 +8,7 @@ const assets = [
     'https://pro.fontawesome.com/releases/v5.10.0/css/all.css',
     'https://pro.fontawesome.com/releases/v5.10.0/webfonts/fa-solid-900.woff2',
     'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css',
+    'https://hi.kickassapp.com/kickass.js'
 ];
 
 self.addEventListener('install', (evt) => {
