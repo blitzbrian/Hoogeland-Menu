@@ -17,5 +17,3 @@ sudo apt install ./discord.deb -y
 rm discord.deb
 echo "Done installing Discord"
 echo "Done installing Project COOL!"
-echo "Removing install script"
-rm install.sh
