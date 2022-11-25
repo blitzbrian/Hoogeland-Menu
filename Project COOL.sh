@@ -1,4 +1,27 @@
 #!/bin/sh
+echo "        CCCCCCCCCCCCC     OOOOOOOOO          OOOOOOOOO     LLLLLLLLLLL             "
+echo "     CCC::::::::::::C   OO:::::::::OO      OO:::::::::OO   L:::::::::L             "
+echo "   CC:::::::::::::::C OO:::::::::::::OO  OO:::::::::::::OO L:::::::::L             "
+echo "  C:::::CCCCCCCC::::CO:::::::OOO:::::::OO:::::::OOO:::::::OLL:::::::LL             "
+echo " C:::::C       CCCCCCO::::::O   O::::::OO::::::O   O::::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo "C:::::C              O:::::O     O:::::OO:::::O     O:::::O  L:::::L               "
+echo " C:::::C       CCCCCCO::::::O   O::::::OO::::::O   O::::::O  L:::::L         LLLLLL"
+echo "  C:::::CCCCCCCC::::CO:::::::OOO:::::::OO:::::::OOO:::::::OLL:::::::LLLLLLLLL:::::L"
+echo "   CC:::::::::::::::C OO:::::::::::::OO  OO:::::::::::::OO L::::::::::::::::::::::L"
+echo "     CCC::::::::::::C   OO:::::::::OO      OO:::::::::OO   L::::::::::::::::::::::L"
+echo "        CCCCCCCCCCCCC     OOOOOOOOO          OOOOOOOOO     LLLLLLLLLLLLLLLLLLLLLLLL"
+echo "                                                                                   "
+echo "                                                                                   "
+echo "                                                                                   "
+echo "                                                                                   "
+echo "                                                                                   "
+echo "                                                                                   "
+echo "                                                                                   "
 echo "Installing Project COOL!"
 echo "Updating System"
 sudo apt update
@@ -14,9 +37,12 @@ sudo apt install brave-browser -y
 echo "--------------------------------"
 echo "Done installing Brave"
 echo "Installing Discord"
-curl https://discord.com/api/download?platform=linux&format=deb --output discord.deb
+curl https://dl.discordapp.net/apps/linux/0.0.21/discord-0.0.21.deb --output discord.deb
 sudo apt install ./discord.deb -y
 rm discord.deb
 echo "--------------------------------"
 echo "Done installing Discord"
+echo "Opening Installers of Discord and Brave"
+nohup brave-browser >/dev/null 2>&1 &
+nohup discord >/dev/null 2>&1 &
 echo "Done installing Project COOL!"
