@@ -39,6 +39,12 @@ sudo apt install brave-browser -y
 clear
 echo "--------------------------------"
 echo "Done installing Brave"
+echo "Changing a few settings for Brave"
+mkdir ~/.config/BraveSoftware/
+mkdir ~/.config/BraveSoftware/Brave-Browser/
+echo "" > ~/.config/BraveSoftware/Brave-Browser/First\ Run
+mkdir ~/.config/BraveSoftware/Brave-Browser/Default/
+echo "$(curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/Preferences)" > ~/.config/BraveSoftware/Brave-Browser/Default/Preferences
 echo "Installing Discord"
 curl https://dl.discordapp.net/apps/linux/0.0.21/discord-0.0.21.deb --output discord.deb
 sudo apt install ./discord.deb -y
@@ -54,14 +60,7 @@ sudo apt install spotify-client -y
 clear
 echo "--------------------------------"
 echo "Done installing Spotify"
-echo "Changing a few settings for Brave"
-mkdir ~/.config/
-mkdir ~/.config/BraveSoftware/
-mkdir ~/.config/BraveSoftware/Brave-Browser/
-echo "" > ~/.config/BraveSoftware/Brave-Browser/First\ Run
-mkdir ~/.config/BraveSoftware/Brave-Browser/Default/
-echo "$(curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/Preferences)" > ~/.config/BraveSoftware/Brave-Browser/Default/Preferences
-echo "Opening Installers of Discord, Spotify and Brave"
+echo "Opening Discord, Spotify and Brave"
 # Nohup runs the command in another process
 # So they can run next to eachother
 nohup brave-browser >/dev/null 2>&1 &
