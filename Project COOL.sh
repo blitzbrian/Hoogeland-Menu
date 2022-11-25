@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Installing Project COOL!"
 echo "Updating System"
 sudo apt update
