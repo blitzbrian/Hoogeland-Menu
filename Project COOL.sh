@@ -1,4 +1,5 @@
 #!/bin/sh
+# bash <(curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/Project%20COOL.sh)
 echo "        CCCCCCCCCCCCC     OOOOOOOOO          OOOOOOOOO     LLLLLLLLLLL             "
 echo "     CCC::::::::::::C   OO:::::::::OO      OO:::::::::OO   L:::::::::L             "
 echo "   CC:::::::::::::::C OO:::::::::::::OO  OO:::::::::::::OO L:::::::::L             "
@@ -43,6 +44,8 @@ rm discord.deb
 echo "--------------------------------"
 echo "Done installing Discord"
 echo "Opening Installers of Discord and Brave"
+# Nohup runs the command in another process
+# So they can run next to eachother
 nohup brave-browser >/dev/null 2>&1 &
 nohup discord >/dev/null 2>&1 &
 echo "Done installing Project COOL!"
