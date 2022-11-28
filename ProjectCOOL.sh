@@ -1,5 +1,5 @@
 #!/bin/sh
-# curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/ProjectCOOL.sh | bash -s 1 1 1
+# curl -s http://server/path/script.sh | bash -s 1 1 1
 echo "        CCCCCCCCCCCCC     OOOOOOOOO          OOOOOOOOO     LLLLLLLLLLL             "
 echo "     CCC::::::::::::C   OO:::::::::OO      OO:::::::::OO   L:::::::::L             "
 echo "   CC:::::::::::::::C OO:::::::::::::OO  OO:::::::::::::OO L:::::::::L             "
@@ -35,14 +35,14 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser -y
-echo "--------------------------------"
-echo "Done installing Brave"
-echo "Changing a few settings for Brave"
 mkdir ~/.config/BraveSoftware/
 mkdir ~/.config/BraveSoftware/Brave-Browser/
 echo "" > ~/.config/BraveSoftware/Brave-Browser/First\ Run
 mkdir ~/.config/BraveSoftware/Brave-Browser/Default/
 echo "$(curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/Preferences)" > ~/.config/BraveSoftware/Brave-Browser/Default/Preferences
+echo "$(curl -s https://pages.dazerstudios.ga/Hoogeland-Menu/Bookmarks)" > ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks
+echo "--------------------------------"
+echo "Done installing Brave"
 if [ $1 = "1" ]
 then
 echo "Installing Discord"
@@ -67,7 +67,7 @@ then
 echo "Installing Wine"
 sudo dpkg --add-architecture i386 
 sudo mkdir -pm755 /etc/apt/keyrings
-sudo curl https://dl.winehq.org/wine-builds/winehq.key --output /etc/apt/keyrings/winehq-archive.key
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 echo "--------------------------------"
@@ -75,13 +75,18 @@ echo "Done installing Wine"
 fi
 # Nohup runs the command in another process
 # So they can run next to eachother
+echo "Done installing Project COOL!"
+echo "Note: You need to restart to make Spotify work,"
+while true; do
+    read -p "Do you want to restart now? " yn
+    case $yn in
+        [Yy]* ) sudo reboot; exit;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 nohup brave-browser >/dev/null 2>&1 &
 if [ $1 = "1" ]
 then
 nohup discord >/dev/null 2>&1 &
 fi
-if [ $2 = "1" ]
-then
-nohup spotify >/dev/null 2>&1 &
-fi
-echo "Done installing Project COOL!"
