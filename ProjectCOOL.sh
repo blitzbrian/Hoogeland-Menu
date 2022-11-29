@@ -67,14 +67,12 @@ then
 echo "Installing Wine"
 sudo dpkg --add-architecture i386 
 sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo echo "$(curl -s https://dl.winehq.org/wine-builds/winehq.key)" > /etc/apt/keyrings/winehq-archive.key
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 echo "--------------------------------"
 echo "Done installing Wine"
 fi
-# Nohup runs the command in another process
-# So they can run next to eachother
 echo "Done installing Project COOL!"
 echo "Note: You need to restart to make Spotify work,"
 while true; do
@@ -85,6 +83,8 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
+# Nohup runs the command in another process
+# So they can run next to eachother
 nohup brave-browser >/dev/null 2>&1 &
 if [ $1 = "1" ]
 then
